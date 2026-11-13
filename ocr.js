@@ -20,7 +20,7 @@ const config = () => ({
 
 
 //Manejador de errores - clasificacion code HTTP
-async function fallo(res, contexto){
+export async function fallo(res, contexto){
   const detalle = await res.text()
   console.error (`Error en AZURE: ${contexto} ${res.status} - descripcion: ${detalle}`)
 
@@ -44,7 +44,7 @@ async function fallo(res, contexto){
 }
 
 //No es necesario guardar el PDF de manera fisica (buffer = memoria)
-async function leerPDF(buffer){
+export async function leerPDF(buffer){
   //  Necesitamos los parametros de conexion -> config()
 
   const {endpoint,key,apiVersion,model} = config()
