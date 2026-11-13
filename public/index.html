@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizando PDF con Azure</title>
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lector de PDF</h1>
+        <p>Sube un archivo PDF para analizar con Azure.</p>
+    </header>
+
+    <div>
+        <form id="formulario">
+            <input type="file" id="archivo" name="archivo" accept="application/pdf" required>
+            <button type="submit" id="btnExtraer"><em>Extraer datos</em></button>
+        </form>
+
+        <!-- Estado del procesamiento -->
+        <p id="estado"></p>
+
+        <!-- Resultado -->
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>
