@@ -1,29 +1,17 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analizando PDF con Azure</title>
-    <script src="/js/app.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Historia del Perú IA</title>
+    <link rel="stylesheet" href="css/syle.css">
+    <script src="/js/chat.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Lector de PDF</h1>
-        <p>Sube un archivo PDF para analizar con Azure.</p>
-    </header>
-
-    <div>
-        <form id="formulario">
-            <input type="file" id="archivo" name="archivo" accept="application/pdf" required>
-            <button type="submit" id="btnExtraer"><em>Extraer datos</em></button>
-        </form>
-
-        <!-- Estado del procesamiento -->
-        <p id="estado"></p>
-
-        <!-- Resultado -->
-        <div id="resultado"></div>
+    <div class="app">
+        <header><div class="brand"><div class="logo">✦</div><div><h1>Historia del Perú IA</h1><p>Asistente educativo · Azure OpenAI</p></div></div><button id="nuevo" type="button">Nuevo chat</button></header>
+        <main id="mensajes" role="log" aria-live="polite"><section class="bienvenida"><div class="simbolo">✦</div><h2>Descubre nuestra historia</h2><p>Pregunta sobre las civilizaciones, los personajes y los acontecimientos que marcaron el Perú.</p><div class="sugerencias"><button data-pregunta="¿Qué fue la cultura Caral?">Cultura Caral</button><button data-pregunta="¿Quién fue Pachacútec?">Pachacútec</button><button data-pregunta="¿Cómo fue la independencia del Perú?">Independencia</button><button data-pregunta="¿Quién fue Miguel Grau?">Miguel Grau</button></div></section></main>
+        <footer><form id="formulario"><label class="sr-only" for="pregunta">Tu pregunta</label><input id="pregunta" type="text" maxlength="2000" placeholder="Pregunta sobre la historia del Perú..." autocomplete="off" required><button id="enviar" type="submit">Enviar</button></form><small>La IA puede cometer errores. Verifica los datos históricos importantes.</small></footer>
     </div>
 </body>
 </html>

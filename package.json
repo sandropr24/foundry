@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node server.js",
+    "start": "node server.js",
     "dev": "node --watch server.js"
   },
   "keywords": [],
   "author": "Sandro Pachas Romani",
-  "license":"ISC",
+  "license": "ISC",
   "type": "module",
   "dependencies": {
     "dotenv": "^18.0.10",
     "express": "^5.3.0",
-    "multer": "^2.5.0"
+    "multer": "^2.5.0",
+    "openai": "^7.60.0"
   }
 }
